@@ -61,7 +61,9 @@ type HashBag struct {
 }
 
 func NewHashBag() *HashBag {
-	return &HashBag{}
+	bag := &HashBag{}
+	bag.sums = make(map[string]string)
+	return bag
 }
 
 func (b *HashBag) Put(name, sha string) {
